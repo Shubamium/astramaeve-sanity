@@ -16,8 +16,48 @@ export default defineType({
 			type:'image',
 		}),
 		defineField({
-			name:'sponsors',
+			name:'contact_art',
+			title:'Contact Art',
 			type:'image',
+		}),
+		defineField({
+			name:'sponsors',
+			type:'array',
+			of:[{
+				type:'object',
+				fields:[
+					defineField({
+						name:'link',
+						type:'url',
+					}),
+					defineField({
+						name:'image',
+						type:'image',
+					})
+				]
+			}]
+		}),
+		defineField({
+			name:'goals',
+			type:'array',
+			of:[
+				{
+					type:'string',
+				}
+			]
+		}),defineField({
+			name:'achieved_goals',
+			title:'Achieved Goals',
+			type:'array',
+			of:[
+				{
+					type:'object',
+					fields:[
+						{name:'goal',type:'string'},
+						{name:'date',type:'string'},
+					]
+				}
+			]
 		})
 	],
 
