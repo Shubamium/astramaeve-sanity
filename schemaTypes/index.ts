@@ -1,4 +1,5 @@
 import commission from "./commission";
+import credits from "./credits";
 import fanart from "./fanart";
 import gallery from "./gallery";
 import general from "./general";
@@ -9,5 +10,6 @@ export const schemaTypes = [
 	gallery,
 	fanart,
 	commission,
-	shop
+	shop,
+	credits
 ]
